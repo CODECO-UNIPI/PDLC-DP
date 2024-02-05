@@ -191,7 +191,9 @@ def preprocess(data_array: np.ndarray, train_size: float , val_size: float):
 
 
 def read_topology(topology_path):
-
+    '''
+    Function that reads the net_topology and returns the adjacency_matrix
+    '''
     # Opening JSON file
     f = open(topology_path)
 
@@ -211,6 +213,9 @@ def read_topology(topology_path):
 
 
 def GNN_operations_STGN(data):
+    '''
+    Overall dp_operations
+    '''
     cpu_array, ram_array, node_names=  create_metrics_arrays(data)
     cpu_train_array, cpu_val_array, cpu_test_array, cpu_mean, cpu_std = preprocess(ram_array, train_size=0.8, val_size=0.2)
     ram_train_array, ram_val_array, ram_test_array, ram_mean, ram_std = preprocess(cpu_array, train_size=0.8, val_size=0.2)
