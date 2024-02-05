@@ -118,12 +118,6 @@ def CA_operations_(data):
     return {"max_features_values": max_values, "normalized_data": normalized_data}
 
 
-if __name__ == "__main__":
-    data = read_csv(filepath_to_csv)
-    if isinstance(data, pd.core.frame.DataFrame):
-        print(CA_operations_(data))
-
-        
 
         
 
