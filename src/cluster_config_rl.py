@@ -3,7 +3,7 @@
 Script Description:
 -------------------
 This script performs is used to keep the static variables of a class and updating the pod_list
-It is a script mandatory for i2cat's operations within the PDLC component
+It is a script mandatory for i2cat's operations within the PDLC component- (pod mapping procedure)
 
 -------------------
 
