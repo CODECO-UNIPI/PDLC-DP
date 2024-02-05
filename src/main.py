@@ -46,19 +46,13 @@ if __name__ == "__main__":
     data = read_csv(filepath_to_csv)
     if isinstance(data, pd.core.frame.DataFrame):
 
-        node_names, cpu_train_array, cpu_val_array, cpu_test_array, cpu_mean, cpu_std, ram_train_array, ram_val_array, ram_test_array, ram_mean, ram_std, net_topology= (GNN_operations_STGN(data))
-        STGN_dict_values = {"node_names": node_names, "cpu_train_array": cpu_train_array, "cpu_val_array":cpu_val_array, "cpu_test_array": cpu_test_array, 
-                            "cpu_mean":cpu_mean, "cpu_std": cpu_std, "ram_train_array":ram_train_array, "ram_val_array": ram_val_array,
-                            "ram_test_array": ram_test_array, "ram_mean": ram_mean, "ram_std": ram_std, "net_topology": net_topology}
+        print(GNN_operations_STGN(data))
+        print(GNN_operations_A3T(data)) 
+        print(RL_operations_(data))  
+        
+    else:
+        pass
 
-        nodes_list, node_names_, min_mean, sampled_data, sampled_selected_nodes, X_nodes_input, nodes_metrics_input, topology_matrix, mean, std = (GNN_operations_A3T(data))
-        A3T_dict_values = {"node_list":nodes_list, "node_names_": node_names_, "min_mean": min_mean,"sampled_data": sampled_data,  
-                            "sampled_selected_nodes": sampled_selected_nodes, "X_nodes_input": X_nodes_input, 
-                            "nodes_metrics_input":nodes_metrics_input, "topology_matrix": topology_matrix, "mean":mean, "std": std}
-
-        print(STGN_dict_values)
-
-        print(RL_operations_(data))                    
 
 
 

@@ -161,5 +161,7 @@ def GNN_operations_A3T(data):
     X_nodes_input=metrics_arrays(sampled_selected_nodes, "memory")
     nodes_metrics_input, topology_matrix, mean, std = normalization(X_nodes_input, read_topology(network_topology_json))
 
-    return nodes_list, node_names, min_mean, sampled_data, sampled_selected_nodes, X_nodes_input, nodes_metrics_input, topology_matrix, mean, std
+    return {"node_list":nodes_list, "node_names_": nodes_list, "min_mean": min_mean,"sampled_data": sampled_data,  
+                            "sampled_selected_nodes": sampled_selected_nodes, "X_nodes_input": X_nodes_input, 
+                            "nodes_metrics_input":nodes_metrics_input, "topology_matrix": topology_matrix, "mean":mean, "std": std}
 

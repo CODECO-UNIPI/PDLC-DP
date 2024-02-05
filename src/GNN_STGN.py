@@ -216,5 +216,7 @@ def GNN_operations_STGN(data):
     ram_train_array, ram_val_array, ram_test_array, ram_mean, ram_std = preprocess(cpu_array, train_size=0.8, val_size=0.2)
     net_topology = read_topology(topology_path=network_topology_json)
 
-    return node_names, cpu_train_array, cpu_val_array, cpu_test_array, cpu_mean, cpu_std, ram_train_array, ram_val_array, ram_test_array, ram_mean, ram_std, net_topology
+    return {"node_names": node_names, "cpu_train_array": cpu_train_array, "cpu_val_array":cpu_val_array, "cpu_test_array": cpu_test_array, 
+                            "cpu_mean":cpu_mean, "cpu_std": cpu_std, "ram_train_array":ram_train_array, "ram_val_array": ram_val_array,
+                            "ram_test_array": ram_test_array, "ram_mean": ram_mean, "ram_std": ram_std, "net_topology": net_topology}
     
