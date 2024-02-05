@@ -5,8 +5,8 @@ import numpy as np
 import os
 import warnings
 import threading
-from GNN_STGN import GNN_operations_STGN
-from GNN_A3T import GNN_operations_A3T
+from dp_GNN_STGN import GNN_operations_STGN
+from dp_GNN_A3T import GNN_operations_A3T
 from dp_RL import RL_operations_, k8s_node_name
 
 
@@ -49,7 +49,7 @@ if __name__ == "__main__":
         print(GNN_operations_STGN(data))
         print(GNN_operations_A3T(data)) 
         print(RL_operations_(data))  
-        
+
     else:
         pass
 
