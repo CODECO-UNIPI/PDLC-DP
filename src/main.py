@@ -1,5 +1,5 @@
 from pandas.core.frame import DataFrame
-from data_generation import create_data
+#from data_generation import create_data
 import pandas as pd
 import numpy as np
 import os
